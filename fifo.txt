@@ -1,0 +1,3 @@
+usr1 : kolejka1
+usr2 : kolejka2
+usr3 : kolejka3
