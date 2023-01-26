@@ -111,16 +111,6 @@ int main(int argc, char *argv[])
                     exit(0);
                 }
 
-                // close(STDOUT_FILENO);
-                // dup(fifo_queue_child);
-                // // close(fifo_queue_child);
-                // if (system(command_to_do) == -1)
-                // {
-                //     close(fifo_queue);
-                //     unlink(fifo_name);
-                //     exit(1);
-                // }
-
                 close(fifo_queue_child);
             }
 
@@ -133,10 +123,7 @@ int main(int argc, char *argv[])
         {
 
             printf("podaj komende: \n");
-            /// tutaj bedzie czekal na uczytkownika i zczytuje z lini kilka danych
-            // scanf("%s %s %s", name_to_proccess, command, fifo_to_proccess);
-            // printf("koko %s %s %s\n", name_to_proccess, command, fifo_to_proccess);
-            size_t len = 0;
+           
             char str[100];
             scanf("%[^\n]%*c", str);
             if (strcmp(str, "exit") == 0)
